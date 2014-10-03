@@ -1,0 +1,16 @@
+{
+  "name": "angular-collection-assistant",
+  "version": "1.0.0",
+  "homepage": "https://github.com/hash-bang/angular-collection-assistant",
+  "authors": [
+    "Matt Carter <m@ttcarter.com>"
+  ],
+  "description": "Helper service to handle Angular collection update events via $watchCollection",
+  "main": "ng-collection-assistant.js",
+  "keywords": [
+    "angular",
+    "collections",
+    "CRUD"
+  ],
+  "license": "MIT"
+}
