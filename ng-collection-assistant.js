@@ -114,6 +114,8 @@ angular.module('ng-collection-assistant', [])
 					}
 				}
 
+				this._dirty = false;
+
 				return this;
 			};
 
