@@ -1,7 +1,5 @@
-var collectionAssistant = require("./index.js");
+var collectionAssistant = require("./ng-collection-assistant");
 var assert = require("assert");
-
-console.log(collectionAssistant);
 
 // Detect append {{{
 var newItems = [];
