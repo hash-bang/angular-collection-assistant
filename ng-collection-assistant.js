@@ -85,10 +85,6 @@ angular.module('ng-collection-assistant', [])
 				this._deleted = [];
 				this._same = [];
 
-				angular.forEach(newCollection, function(item, key) {
-					console.log('EXAMINE', item, key);
-				});
-
 				for (var offset in newCollection) {
 					var index = this.getIndexOf(newCollection[offset]);
 					this._newPointers[index] = newCollection[offset];
