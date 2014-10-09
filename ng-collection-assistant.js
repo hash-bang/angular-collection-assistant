@@ -137,6 +137,7 @@ angular.module('ng-collection-assistant', [])
 					case 'change':
 						return this.updateItem(callback);
 				}
+				return this;
 			};
 
 			/**
@@ -150,6 +151,7 @@ angular.module('ng-collection-assistant', [])
 				for (var offset in this._created) {
 					callback(_newPointers[this._created[offset]]);
 				}
+				return this;
 			};
 
 			/**
@@ -163,6 +165,7 @@ angular.module('ng-collection-assistant', [])
 				for (var offset in this._deleted) {
 					callback(_oldPointers[this._deleted[offset]]);
 				}
+				return this;
 			};
 
 			/**
@@ -176,6 +179,7 @@ angular.module('ng-collection-assistant', [])
 				for (var offset in this._same) {
 					callback(_oldPointers[this._same[offset]]);
 				}
+				return this;
 			};
 
 			/**
@@ -190,6 +194,7 @@ angular.module('ng-collection-assistant', [])
 				for (var offset in this._updated) {
 					callback(_newPointers[this._updated[offset]], _oldPointers[this._updated[offset]]);
 				}
+				return this;
 			};
 
 			return this;
