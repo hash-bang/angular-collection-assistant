@@ -140,6 +140,8 @@ angular.module('ng-collection-assistant', [])
 					case 'then':
 						// These actually do nothing except for calling the callback
 						return this.then(callback);
+					case 'changes':
+						return this.changes(callback);
 				}
 				return this;
 			};
@@ -153,6 +155,18 @@ angular.module('ng-collection-assistant', [])
 			*/
 			this.then = function(callback) {
 				callback();
+				return this;
+			};
+
+			/**
+			* Similar to finally but only fires if there is something in the new, delete or change buckets
+			* @param callback() callback The callback to execute
+			* @return object This chainable object
+			* @see On()
+			*/
+			this.changes = function(callback) {
+				if (this._created || this._deleted || this._updated)
+					callback();
 				return this;
 			};
 
