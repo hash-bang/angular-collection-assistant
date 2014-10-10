@@ -136,8 +136,32 @@ angular.module('ng-collection-assistant', [])
 					case 'update':
 					case 'change':
 						return this.updateItem(callback);
+					case 'finally':
+					case 'then':
+						// These actually do nothing except for calling the callback
+						return this.then(callback);
 				}
 				return this;
+			};
+
+			/**
+			* Function called 'after' everything else
+			* Actually this function does nothing except for calling the callback and exists just to allow upstream coders to keep everything nice and neat
+			* @param callback() callback The callback to execute
+			* @return object This chainable object
+			* @see On()
+			*/
+			this.then = function(callback) {
+				callback();
+				return this;
+			};
+
+			/**
+			* Alias of 'then'
+			* @see then()
+			*/
+			this.finally = function(callback) {
+				return this.then(callback);
 			};
 
 			/**

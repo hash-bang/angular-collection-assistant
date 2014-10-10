@@ -64,7 +64,8 @@ Example use
 			});
 			.on('deleted', function(item) {
 				console.log('Deleted Item!', item);
-			});
+			})
+			.on('finally', $scope.redraw);
 	});
 
 
