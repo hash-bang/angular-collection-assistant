@@ -1,0 +1,27 @@
+{
+  "name": "angular-collection-assistant",
+  "version": "1.1.4",
+  "description": "Helper service to handle Angular collection update events via $watchCollection",
+  "main": "ng-collection-assistant.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hash-bang/angular-collection-assistant.git"
+  },
+  "keywords": [
+    "angular",
+    "collection",
+    "collections",
+    "watch",
+    "watcher",
+    "utility"
+  ],
+  "author": "Matt Carter <m@ttcarter.com> (https://github.com/hash-bang)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hash-bang/angular-collection-assistant/issues"
+  },
+  "homepage": "https://github.com/hash-bang/angular-collection-assistant#readme",
+  "dependencies": {
+    "angular": "^1.5.3"
+  }
+}
